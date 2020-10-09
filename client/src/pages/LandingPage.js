@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
 		fontFamily: `"Rubik", sans-serif`,
     fontWeight: 500,
     paddingTop: '20px',
-    paddingBottom: '20px'
+    paddingBottom: '20px',
+    marginTop: '10px'
   },
 	margin: {
 		margin: theme.spacing(1)
