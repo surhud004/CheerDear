@@ -21,14 +21,18 @@ const useStyles = makeStyles((theme) => ({
 	toolbarTitle: {
 		flexGrow: 1,
 		fontFamily: `"Rubik", sans-serif`,
-		fontWeight: 500
+		fontWeight: 500,
+		color: '#EDF5E1'
+	},
+	colorvariant: {
+		color: '#05386B'
 	},
 	margin: {
 		margin: theme.spacing(1)
 	}
 }));
 
-const Navbar = () => {
+const Navbar = (props) => {
     const classes = useStyles();
 
     return (
@@ -41,11 +45,11 @@ const Navbar = () => {
 					aria-label="landing"
 					className={classes.margin}
 				>
-				</IconButton>
 				<img src="logo.png" alt="logo" />
-				<Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+				</IconButton>
+				<Typography variant="h6" noWrap className={classes.toolbarTitle}>
 					<Box letterSpacing={4} m={1}>
-						CHEERDEAR
+						CHEER<span className={classes.colorvariant}>DEAR</span>
 					</Box>
 				</Typography>
             </Toolbar>
