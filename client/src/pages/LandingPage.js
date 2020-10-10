@@ -3,10 +3,10 @@ import {
 	Box,
 	Typography,
   Container,
-  Grid
+  Grid,
+  Button
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Navbar from '../components/Navbar';
 
 const useStyles = makeStyles((theme) => ({
   background: {
@@ -18,33 +18,53 @@ const useStyles = makeStyles((theme) => ({
 		flexGrow: 1,
 		fontFamily: `"Rubik", sans-serif`,
     fontWeight: 500,
-    paddingTop: '20px',
-    paddingBottom: '20px',
-    marginTop: '10px'
+    paddingTop: '10px',
+    paddingBottom: '10px',
+    color: '#EDF5E1'
   },
-	margin: {
-		margin: theme.spacing(1)
-	}
+  subheading: {
+    fontSize: '20px',
+    color: '#379683'
+  },
+  colorvariant: {
+    color: '#05386B'
+  }
 }));
 
-const LandingPage = () => {
+const LandingPage = (props) => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
-        <Navbar />
-        <Container className={classes.background}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
-              <Typography variant="h2" color="inherit" className={classes.heading}>
-                <Box letterSpacing={2} m={1}>
-                  Feel the relaxation at home when you are quarantined.
-                </Box>
+    <Container className={classes.background}>
+      <Grid container>
+        <Grid item xs={12} md={6}>
+          <Box letterSpacing={2} m={1}>
+            <Typography variant="h2" className={classes.heading}>
+              Relax at home when you are <span className={classes.colorvariant}>quarantined.</span>
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
+      <Grid container>
+        <Grid item xs={12} md={6}>
+            <Box letterSpacing={2} m={1}>
+              <Typography className={classes.subheading}>
+                Find something interesting to do at home, deer. Cheers!
               </Typography>
-            </Grid>
-          </Grid>
-        </Container>
-    </React.Fragment>
+            </Box>
+        </Grid>
+      </Grid>
+      <Grid container>
+        <Grid item md={12}>
+          <Button
+            variant="outlined"
+            onClick={() => props.history.push('/enter')}
+          >
+            Get Started
+          </Button>
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 

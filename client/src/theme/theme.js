@@ -7,17 +7,22 @@ export const theme = createMuiTheme({
     fontSize: 20
   },
   palette: {
-    primary: { main: "#05386B" },
+    primary: { main: '#05386B' },
     background: {
-      default: "#5CDB95"
+      default: '#5CDB95'
     }
   },
   overrides: {
     MuiButton: { 
       root: { 
-        borderRadius: '30px', 
-        padding: '10px'
-      }, 
-    }, 
+        borderRadius: '20px',
+        padding: '10px',
+        backgroundColor: '#05386B',
+        color: '#EDF5E1',
+        '&:hover': {
+          backgroundColor: '#379683',
+        },
+      },
+    },
   },
 });

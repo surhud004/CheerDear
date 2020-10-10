@@ -1,21 +1,28 @@
 import React from 'react';
-import { createBrowserHistory } from 'history';
-import { Switch, Router, Redirect, Route } from 'react-router-dom';
+import { Switch, BrowserRouter, Redirect, Route } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 import LandingPage from '../pages/LandingPage';
-
-const history = createBrowserHistory();
+import HomePage from '../pages/HomePage';
+import history from '../utils/history';
 
 const routes = () => {
     return (
-        <Router history = {history}>
+        <BrowserRouter history = {history}>
+            <Navbar history = {history}/>
             <Switch>
                 <Route 
+                    exact
                     path="/"
-                    component={() => <LandingPage/>}
+                    component={LandingPage}
                 />
-                <Redirect to="/"/>
+                <Route 
+                    exact
+                    path="/enter"
+                    component={HomePage}
+                />
+                <Redirect to="/" />
             </Switch>
-        </Router>
+        </BrowserRouter>
     );
 };
 
