@@ -1,2 +1,2 @@
-# Project_X
-Project under construction. Launching soon. Stay tuned!
+# CheerDear
+A relaxation entertainment app.
