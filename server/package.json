@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "CheerDear - A web app for finding something interesting to do in lockdown.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "surhud004",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
