@@ -45,7 +45,7 @@ const Navbar = (props) => {
 					aria-label="landing"
 					className={classes.margin}
 				>
-				<img src="logo.png" alt="logo" />
+				<img src="../logo.png" alt="logo" />
 				</IconButton>
 				<Typography variant="h6" noWrap className={classes.toolbarTitle}>
 					<Box letterSpacing={4} m={1}>

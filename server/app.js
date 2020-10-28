@@ -9,7 +9,7 @@ app.use(express.static(join(__dirname, '../client/build')));
 app.use('/', indexRouter);
 
 app.get('*', (req, res) => {
-	res.sendFile(join(__dirname, '/client/build/index.html'));
+	res.sendFile(join(__dirname, '../client/public/index.html'));
 });
 
 app.listen(PORT, () => {

@@ -61,7 +61,7 @@ const HomePage = (props) => {
                 <Card className={classes.card}>
                     <CardActionArea
                         component={RouterLink}
-                        to={`backend`}
+                        to={`/enter/happy`}
                     >
                         <CardMedia>
                             <img src="happy.png" alt="happy" className={classes.img} />
@@ -78,7 +78,7 @@ const HomePage = (props) => {
                 <Card className={classes.card}>
                     <CardActionArea
                         component={RouterLink}
-                        to={`backend`}
+                        to={`/enter/stressful`}
                     >
                         <CardMedia>
                             <img src="stressful.png" alt="stressful" className={classes.img} />
@@ -95,7 +95,7 @@ const HomePage = (props) => {
                 <Card className={classes.card}>
                     <CardActionArea
                         component={RouterLink}
-                        to={`backend`}
+                        to={`/enter/sad`}
                     >
                         <CardMedia>
                             <img src="sad.png" alt="sad" className={classes.img} />
@@ -112,7 +112,7 @@ const HomePage = (props) => {
                 <Card className={classes.card}>
                     <CardActionArea
                         component={RouterLink}
-                        to={`backend`}
+                        to={`/enter/depressing`}
                     >
                         <CardMedia>
                             <img src="depressing.png" alt="depressing" className={classes.img} />
